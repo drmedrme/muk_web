@@ -37,7 +37,7 @@
 				@include mk-full-screen-sections();
 			}
 		}
-		.o_user_menu {
+		.o_user_menu, .o_switch_company_menu {
 			> .dropdown-toggle {
 				padding: 0 10px;
 				white-space: nowrap;
@@ -48,6 +48,9 @@
 			.dropdown-menu.show {
 				@include mk-full-screen-sections();
 			}
+		}
+		.o_user_menu img {
+			margin-bottom: 3px;
 		}
 		.o_menu_brand, .o_menu_sections, .oe_topbar_name {
 		    display: none;
@@ -100,7 +103,8 @@
 		            min-width: auto;
 				    box-shadow: none;
 				    background: none;
-				    position: relative;
+				    position: static;
+				    overflow: visible;
 		        }
 			    @for $index from 1 through 5 {
 	                .o_menu_entry_lvl_#{$index} {

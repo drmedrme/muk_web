@@ -35,7 +35,7 @@ FormRenderer.include({
         if (config.device.isMobile) {
             var $dropdown = $(QWeb.render('muk_web_theme.MenuStatusbarButtons'));
             $buttons.addClass("dropdown-menu").appendTo($dropdown);
-            $buttons.addClass("dropdown-menu");
+            $buttons.children().addClass("dropdown-item");
             return $dropdown;
         }
         return $buttons;
