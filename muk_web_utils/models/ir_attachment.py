@@ -17,6 +17,27 @@
 #
 ###################################################################################
 
-from . import ir_attachment
-from . import res_config_settings
+import base64
+import logging
+import mimetypes
 
+from odoo import api, models, fields, _
+from odoo.exceptions import AccessError
+from odoo.tools.mimetypes import guess_mimetype
+
+_logger = logging.getLogger(__name__)
+
+class IrAttachment(models.Model):
+    
+    _inherit = 'ir.attachment'
+    
+    #----------------------------------------------------------
+    # Database
+    #----------------------------------------------------------
+    
+    temporary = fields.Boolean(
+        string="Temporary",
+        default=False,
+        help="Attachments will be deleted by Autovacuum.",
+    )
+    

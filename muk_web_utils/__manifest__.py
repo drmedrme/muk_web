@@ -20,7 +20,7 @@
 { 
     "name": "MuK Web Utils",
     "summary": """Utility Features""",
-    "version": "12.0.2.8.22", 
+    "version": "12.0.2.9.2", 
     "category": "Extra Tools",
     "license": "AGPL-3",
     "author": "MuK IT",
@@ -31,11 +31,12 @@
     ],
     "depends": [
         "web_editor",
-        "muk_utils",
+        "muk_autovacuum",
     ],
     "data": [
         "template/assets.xml",
         "views/res_config_settings_view.xml",
+        "data/autovacuum.xml",
     ],
     "qweb": [
         "static/src/xml/*.xml",
