@@ -32,7 +32,7 @@ var QWeb = core.qweb;
 FormRenderer.include({
 	_renderHeaderButtons: function () {
         var $buttons = this._super.apply(this, arguments);
-        if (config.device.isMobile) {
+        if (config.device.isMobile && this.state.model !== "res.config.settings") {
             var $dropdown = $(QWeb.render('muk_web_theme.MenuStatusbarButtons'));
             $buttons.addClass("dropdown-menu").appendTo($dropdown);
             $buttons.children().addClass("dropdown-item");
